@@ -1,0 +1,27 @@
+.evil_div {
+	position: relative;
+	display: inline-block;
+}
+.evil_div.loading {
+	opacity: 0.5;
+}
+.evil_div.loading::after {
+	content: "";
+	background: linear-gradient(to right, #0000, #8888, #8888, #0000);
+	background-size: 200% 200%;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: loading 1s infinite linear;
+}
+@keyframes loading {
+	0% {
+		background-position-x: 0%;
+	}
+	100% {
+		background-position-x: 200%;
+	}
+}
